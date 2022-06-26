@@ -18,6 +18,7 @@ $("#contact-form").on("submit", function (event) {
       })
       .fail(function (jqxhr, settings, ex) {
         console.log(ex);
+        console.log('failed');
       })
       .always(function () {
         $.LoadingOverlay("hide");

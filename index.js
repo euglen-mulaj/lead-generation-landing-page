@@ -36,11 +36,11 @@ app
 
   })
 
-  .get("/registration", function (request, response) {
+  // .get("/registration", function (request, response) {
   
-      response.sendFile(__dirname + "/registration.html");
+  //     response.sendFile(__dirname + "/registration.html");
     
-  })
+  // })
 
 
   .post("/api/register", async (req, res) => {
@@ -48,6 +48,10 @@ app
     const fullname = req.body.fullname;
     const email = req.body.email;
     const mobile = req.body.phone_country + req.body.phone;
+    console.log(body);
+    console.log(fullname);
+    console.log(email);
+    console.log(mobile);
 
     //backend validation
     if(!validator.isEmail(email) || validator.isEmpty(fullname) || validator.isEmpty(req.body.phone)){
